@@ -29,13 +29,18 @@ body {
     box-shadow: 0px 6px 15px rgba(255, 0, 98, 0.9);
 }
 
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* Menú radial */
 #radialMenu {
     position: absolute;
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
     opacity: 0;
     transform: scale(0.8);
@@ -48,14 +53,15 @@ body {
 
 /* Opciones */
 .option {
-    width: 200px;
-    padding: 15px 20px;
+    width: 220px;
+    padding: 18px 22px;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     cursor: pointer;
+    border: 2px solid transparent;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -63,6 +69,7 @@ body {
 #option2 {
     background: linear-gradient(45deg, #4caf50, #2e7d32);
     box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.6);
+    border-color: greenyellow;
 }
 
 #option2:hover {
@@ -74,6 +81,7 @@ body {
 #option1 {
     background: linear-gradient(45deg, #3b5998, #192f6a);
     box-shadow: 0px 4px 10px rgba(59, 89, 152, 0.6);
+    border-color: chocolate;
 }
 
 #option1:hover {
