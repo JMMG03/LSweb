@@ -1,82 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
-    <header class="py-3">
-        <div class="container d-flex flex-column align-items-center text-center">
-            <div class="d-flex w-100 justify-content-center align-items-center">
-                <div>
-                    <h1 class="mb-1">Bienvenido a Mi Portafolio</h1>
-                    <p class="mb-0">Desarrollador de Aplicaciones & Quiromasajista</p>
-                </div>
-            </div>
-        </div>
-    </header>
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="py-5 text-center">
+      <div class="container">
+        <h1 class="mb-3">Soy Mario, bienvenido a mi Portafolio</h1>
+        <p id="profesion" class="mb-4 fs-4">Selecciona tu interés</p>
 
-    <section id="servicios" class="container text-center my-5">
-        <h2>Mis Servicios</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="service p-4 rounded">
-                    <h3>Quiromasaje</h3>
-                    <p>Relajación, bienestar y salud a través del masaje terapéutico.</p>
-                    <a href="quiromasaje.html" class="btn btn-custom">Más información</a>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="service p-4 rounded">
-                    <h3>Desarrollo de Aplicaciones</h3>
-                    <p>Creación de aplicaciones multiplataforma con tecnologías modernas.</p>
-                    <a href="desarrollo.html" class="btn btn-custom">Más información</a>
-                </div>
-            </div>
+        <!-- Botón central con menú radial -->
+        <div
+          class="d-flex justify-content-center position-relative"
+          style="height: 200px"
+        >
+          <button id="mainBtn" class="btn btn-dark align-self-center">
+            Mantén pulsado
+          </button>
+
+          <!-- Menú radial (aparece al mantener pulsado) -->
+          <div id="radialMenu" class="radial-menu">
+            <div id="option1" class="option developer-option">Desarrollador</div>
+            <div id="option2" class="option massage-option">Quiromasajista</div>
+          </div>
         </div>
-    </section>
-    
-    <section id="proyectos" class="container text-center my-5">
-        <h2>Proyectos Destacados</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="project p-4 bg-light rounded shadow-sm">
-                    <h3>ClickerFast</h3>
-                    <p>Juego multijugador en Unity basado en rapidez y reflejos.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="project p-4 bg-light rounded shadow-sm">
-                    <h3>Aplicación de QR</h3>
-                    <p>App temática con sistema de autenticación y generación de códigos QR.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="contacto" class="container text-center my-5">
-        <h2>Contacto</h2>
-        <form class="bg-white p-4 shadow-sm rounded mx-auto" style="max-width: 400px;">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email:</label>
-                <input type="email" id="email" name="email" class="form-control" required>
-            </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" class="form-control" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-dark">Enviar</button>
-        </form>
-    </section>
-    
+      </div>
+    </header>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
