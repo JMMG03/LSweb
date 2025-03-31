@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Evento para cerrar el menú si se hace clic fuera de él
+    //x
     document.addEventListener("click", function (event) {
         if (!radialMenu.contains(event.target) && !mainBtn.contains(event.target)) {
             toggleMenu(false);
