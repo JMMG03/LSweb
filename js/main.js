@@ -1,51 +1,72 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mainBtn = document.getElementById('mainBtn');
-    const radialMenu = document.getElementById('radialMenu');
-    const option1 = document.getElementById('option1');
-    const option2 = document.getElementById('option2');
-    const profesionText = document.getElementById('profesion');
+document.addEventListener("DOMContentLoaded", () => {
+    const mainBtn = document.getElementById("mainBtn");
+    const radialMenu = document.getElementById("radialMenu");
+    const option1 = document.getElementById("option1");
+    const option2 = document.getElementById("option2");
 
     let isMenuOpen = false;
 
-    // Mostrar menú radial
+    // Función para mostrar el menú radial
     const showRadialMenu = () => {
-        radialMenu.classList.add('show');
+        radialMenu.style.display = "flex"; // Asegurarse de que el menú sea visible
+        setTimeout(() => {
+            radialMenu.classList.add("show");
+        }, 10); // Pequeño delay para que la transición funcione
         isMenuOpen = true;
     };
 
-    // Ocultar menú radial
+    // Función para ocultar el menú radial
     const hideRadialMenu = () => {
-        radialMenu.classList.remove('show');
+        radialMenu.classList.remove("show");
+        setTimeout(() => {
+            if (!isMenuOpen) radialMenu.style.display = "none"; // Ocultarlo después de la animación
+        }, 300);
         isMenuOpen = false;
     };
 
-    // Eventos para mostrar el menú al mantener presionado
-    mainBtn.addEventListener('mousedown', showRadialMenu);
-    mainBtn.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        showRadialMenu();
+    // Evento para mostrar el menú al presionar el botón
+    mainBtn.addEventListener("mousedown", () => {
+        if (!isMenuOpen) {
+            showRadialMenu();
+        }
     });
 
-    // Evento para ocultar el menú si no se selecciona nada
-    document.addEventListener('mouseup', (e) => {
-        if (isMenuOpen && !e.target.classList.contains('option')) {
+    mainBtn.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        if (!isMenuOpen) {
+            showRadialMenu();
+        }
+    });
+
+    // Evento para ocultar el menú si se toca fuera
+    document.addEventListener("mouseup", (e) => {
+        if (isMenuOpen && !e.target.closest("#radialMenu") && e.target !== mainBtn) {
             hideRadialMenu();
         }
     });
 
-    // Función para manejar la selección
-    const selectOption = (option, text) => {
-        profesionText.textContent = text;
-        hideRadialMenu();
+    document.addEventListener("touchend", (e) => {
+        if (isMenuOpen && !e.target.closest("#radialMenu") && e.target !== mainBtn) {
+            hideRadialMenu();
+        }
+    });
 
-        // Resetear selección
-        option1.classList.remove('selected');
-        option2.classList.remove('selected');
-
-        // Resaltar opción seleccionada
-        option.classList.add('selected');
+    // Función para redirigir a la página correspondiente
+    const redirectToPage = (url) => {
+        window.location.href = url;
     };
 
-    option1.addEventListener('click', () => selectOption(option1, "Desarrollador de Aplicaciones"));
-    option2.addEventListener('click', () => selectOption(option2, "Quiromasajista Profesional"));
+    // Eventos de selección de opciones
+    option1.addEventListener("click", () => redirectToPage("developer.html"));
+    option2.addEventListener("click", () => redirectToPage("quiromasaje.html"));
+
+    option1.addEventListener("touchend", (e) => {
+        e.preventDefault();
+        redirectToPage("developer.html");
+    });
+
+    option2.addEventListener("touchend", (e) => {
+        e.preventDefault();
+        redirectToPage("quiromasaje.html");
+    });
 });
