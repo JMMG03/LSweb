@@ -4,32 +4,57 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #60ffff, #d6da00);
+    background: linear-gradient(0deg, #f6ff00, #00e5ff);
     margin: 0;
     font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(0deg, #000000, #ff0033);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s ease-in-out, heartbeat 2s infinite ease-in-out;
+}
+
+p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #000000;
+    text-align: center; 
+    margin-bottom: 30px;
+    margin-top: 25px;
+    opacity: 0.9;
+    transition: color 0.3s ease;
 }
 
 /* Botón principal */
 #mainBtn {
     width: 80px;
     height: 80px;
-    background: radial-gradient(circle, #000000, #ff00ea);
+    background: radial-gradient(circle, #000000, #ff00e1);
     border: none;
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
     color: white;
-    box-shadow: 0px 4px 10px rgba(212, 0, 255, 0.6);
+    box-shadow: 0px 0px 30px rgba(255, 0, 225, 0.6);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 #mainBtn:hover {
     transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(255, 0, 98, 0.9);
+    box-shadow: 0px 0px 90px rgb(238, 0, 255);
 }
 
-.hidden{
+.hidden {
     opacity: 0;
     pointer-events: none;
 }
@@ -65,26 +90,47 @@ body {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Quiromasaje - Verde Relajante  xx*/
-#option2 {
-    background: linear-gradient(45deg, #4caf50, #2e7d32);
-    box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.6);
-    border-color: greenyellow;
-}
-
-#option2:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(76, 175, 80, 0.9);
-}
-
 /* Desarrollo - Azul Tecnológico */
 #option1 {
-    background: linear-gradient(45deg, #3b5998, #192f6a);
-    box-shadow: 0px 4px 10px rgba(59, 89, 152, 0.6);
-    border-color: chocolate;
+    background: linear-gradient(30deg, #cac703, #ff0000);
+    box-shadow: 0px 0px 10px rgb(255, 0, 0);
+    border-color: rgb(0, 0, 0);
 }
 
 #option1:hover {
     transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(59, 89, 152, 0.9);
+    box-shadow: 0px 0px 20px rgb(255, 141, 1);
+}
+
+
+/* Quiromasaje - Verde Relajante  xx*/
+#option2 {
+    background: linear-gradient(30deg, #00c2cc, #00ff0d);
+    box-shadow: 0px 0px 10px rgb(0, 136, 255);
+    border-color: rgb(0, 8, 255);
+}
+
+#option2:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 123, 255, 0.9);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    30% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    70% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
