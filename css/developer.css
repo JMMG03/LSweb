@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(30deg, #00c2cc, #00ff0d);
+    background: linear-gradient(0deg, #d75252, #fff238);
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
     color: #000;
@@ -8,7 +8,7 @@ body {
 header h1 {
     font-size: 3rem;
     font-weight: bold;
-    background: linear-gradient(to right, #000, #00f0ff);
+    background: linear-gradient(to right, #000000, #fa0303);
     -webkit-background-clip: text;
     color: transparent;
     animation: fadeInDown 1s ease-in-out;
@@ -20,7 +20,7 @@ header h1 {
 }
 
 h2 {
-    color: #003f5c;
+    color: #5c0000;
     font-weight: bold;
 }
 
@@ -72,7 +72,7 @@ h2 {
 }
 
 .github-btn:hover {
-    background-color: #00c2cc;
+    background-color: #ff00fb;
     color: #000;
 }
 
