@@ -11,69 +11,67 @@
 </head>
 
 <body>
-    <div class="container text-center">
-        <h1>Quiromasaje</h1>
-        <p class="intro">Explora nuestros servicios especializados que combinan técnicas de masaje con un enfoque terapéutico integral. Tu bienestar es nuestra prioridad.</p>
-    
-        <div class="row g-4 justify-content-center" id="cardContainer">
-          <!-- 4 Tarjetas principales -->
-          <div class="col-md-4">
-            <div class="card h-100 p-2 position-relative" data-title="Masaje Descontracturante" data-desc="Alivia tensiones profundas y contracturas musculares." data-price="25€">
-              <img src="https://via.placeholder.com/350x180" class="card-img-top" alt="Masaje Descontracturante">
-              <div class="card-body">
-                <h5 class="card-title">Masaje Descontracturante</h5>
-              </div>
+    <h1>Quiromasaje</h1>
+    <p class="intro">
+      Bienvenido a la sección de quiromasaje. Descubre nuestros servicios personalizados para tu bienestar físico y mental.
+    </p>
+  
+    <div class="container">
+      <div id="cardContainer" class="row justify-content-center gy-4">
+        <!-- Tarjetas -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card service-card position-relative" data-id="1">
+            <img src="https://via.placeholder.com/400x200?text=Relajante" class="card-img-top" alt="Relajante">
+            <div class="card-body text-center">
+              <h5 class="card-title">Masaje Relajante</h5>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 p-2 position-relative" data-title="Masaje Relajante" data-desc="Reduce el estrés y calma cuerpo y mente." data-price="20€">
-              <img src="https://via.placeholder.com/350x180" class="card-img-top" alt="Masaje Relajante">
-              <div class="card-body">
-                <h5 class="card-title">Masaje Relajante</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 p-2 position-relative" data-title="Masaje Deportivo" data-desc="Recupera tus músculos antes y después del ejercicio." data-price="30€">
-              <img src="https://via.placeholder.com/350x180" class="card-img-top" alt="Masaje Deportivo">
-              <div class="card-body">
-                <h5 class="card-title">Masaje Deportivo</h5>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 p-2 position-relative" data-title="Drenaje Linfático" data-desc="Elimina toxinas y mejora la circulación linfática." data-price="28€">
-              <img src="https://via.placeholder.com/350x180" class="card-img-top" alt="Drenaje Linfático">
-              <div class="card-body">
-                <h5 class="card-title">Drenaje Linfático</h5>
-              </div>
+            <div class="popup">
+              Masaje suave para liberar tensiones. <br><strong>Precio:</strong> 30€<br><small>Sujeto a cambios</small>
             </div>
           </div>
         </div>
-    
-        <!-- Tarjetas extra ocultas -->
-        <div class="row g-4 justify-content-center mt-1 d-none" id="extraCards">
-          <div class="col-md-4">
-            <div class="card h-100 p-2 position-relative" data-title="Masaje Facial" data-desc="Alivia tensiones faciales y rejuvenece el rostro." data-price="18€">
-              <img src="https://via.placeholder.com/350x180" class="card-img-top" alt="Masaje Facial">
-              <div class="card-body">
-                <h5 class="card-title">Masaje Facial</h5>
-              </div>
+  
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card service-card position-relative" data-id="2">
+            <img src="https://via.placeholder.com/400x200?text=Descontracturante" class="card-img-top" alt="Descontracturante">
+            <div class="card-body text-center">
+              <h5 class="card-title">Descontracturante</h5>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 p-2 position-relative" data-title="Reflexología Podal" data-desc="Estimulación de puntos reflejos en los pies." data-price="22€">
-              <img src="https://via.placeholder.com/350x180" class="card-img-top" alt="Reflexología Podal">
-              <div class="card-body">
-                <h5 class="card-title">Reflexología Podal</h5>
-              </div>
+            <div class="popup">
+              Ideal para contracturas y dolor muscular. <br><strong>Precio:</strong> 35€<br><small>Sujeto a cambios</small>
             </div>
           </div>
         </div>
-    
-        <!-- Botón Mostrar Más -->
-        <button class="btn btn-toggle mt-4" id="toggleBtn">Mostrar más</button>
+  
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card service-card position-relative" data-id="3">
+            <img src="https://via.placeholder.com/400x200?text=Deportivo" class="card-img-top" alt="Deportivo">
+            <div class="card-body text-center">
+              <h5 class="card-title">Masaje Deportivo</h5>
+            </div>
+            <div class="popup">
+              Estimula o relaja antes y después del deporte. <br><strong>Precio:</strong> 40€<br><small>Sujeto a cambios</small>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card service-card position-relative" data-id="4">
+            <img src="https://via.placeholder.com/400x200?text=Facial" class="card-img-top" alt="Facial">
+            <div class="card-body text-center">
+              <h5 class="card-title">Masaje Facial</h5>
+            </div>
+            <div class="popup">
+              Relajación y rejuvenecimiento facial. <br><strong>Precio:</strong> 25€<br><small>Sujeto a cambios</small>
+            </div>
+          </div>
+        </div>
       </div>
+  
+      <div class="text-center mt-4">
+        <button id="toggleBtn">Mostrar más</button>
+      </div>
+    </div>
     <script src="/js/quiro.js"></script>
 
 </body>

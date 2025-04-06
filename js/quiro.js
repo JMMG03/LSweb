@@ -1,32 +1,55 @@
-const toggleBtn = document.getElementById('toggleBtn');
-    const extraCards = document.getElementById('extraCards');
 
-    toggleBtn.addEventListener('click', () => {
-      extraCards.classList.toggle('d-none');
-      toggleBtn.textContent = extraCards.classList.contains('d-none') ? 'Mostrar más' : 'Mostrar menos';
-    });
+const toggleBtn = document.getElementById("toggleBtn");
+const cardContainer = document.getElementById("cardContainer");
+let showingMore = false;
 
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('click', function () {
-        // Elimina cualquier popup anterior
-        document.querySelectorAll('.popup').forEach(p => p.remove());
+const extraCards = [
+    {
+        title: "Pies y Reflexología",
+        img: "https://via.placeholder.com/400x200?text=Reflexología",
+        desc: "Masaje en pies para activar órganos y mejorar circulación.",
+        price: "30€"
+    },
+    {
+        title: "Masaje con Piedras Calientes",
+        img: "https://via.placeholder.com/400x200?text=Piedras+Calientes",
+        desc: "Relajación profunda con piedras volcánicas.",
+        price: "45€"
+    }
+];
 
-        const popup = document.createElement('div');
-        popup.className = 'popup';
-        popup.innerHTML = `
-          <strong>${this.dataset.title}</strong><br>
-          ${this.dataset.desc}<br><br>
-          <strong>Precio: ${this.dataset.price}</strong>
-          <small>Sujeto a cambios</small>
-        `;
+toggleBtn.addEventListener("click", () => {
+    if (!showingMore) {
+        extraCards.forEach((card, i) => {
+            const col = document.createElement("div");
+            col.className = "col-12 col-sm-6 col-lg-4 extra-card";
+            col.innerHTML = `
+            <div class="card service-card position-relative" data-id="extra${i}">
+              <img src="${card.img}" class="card-img-top" alt="${card.title}">
+              <div class="card-body text-center">
+                <h5 class="card-title">${card.title}</h5>
+              </div>
+              <div class="popup">
+                ${card.desc}<br><strong>Precio:</strong> ${card.price}<br><small>Sujeto a cambios</small>
+              </div>
+            </div>
+          `;
+            cardContainer.appendChild(col);
+        });
+        toggleBtn.innerText = "Mostrar menos";
+    } else {
+        document.querySelectorAll(".extra-card").forEach(el => el.remove());
+        toggleBtn.innerText = "Mostrar más";
+    }
+    showingMore = !showingMore;
+});
 
-        this.appendChild(popup);
-      });
-    });
-
-    // Cerrar el popup al hacer clic fuera
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.card')) {
-        document.querySelectorAll('.popup').forEach(p => p.remove());
-      }
-    });
+// Mostrar pop-up al hacer click en tarjeta
+document.addEventListener("click", e => {
+    const targetCard = e.target.closest(".service-card");
+    document.querySelectorAll(".popup").forEach(p => (p.style.display = "none"));
+    if (targetCard) {
+        const popup = targetCard.querySelector(".popup");
+        popup.style.display = "block";
+    }
+});
