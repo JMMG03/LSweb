@@ -1,115 +1,126 @@
 body {
-    background: linear-gradient(135deg, #00c2cc, #00ff0d);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
-    padding-bottom: 80px;
+  background-color: #0e0e0e;
+  color: #00ffff;
+  font-family: 'Courier New', monospace;
+  margin: 5%;
+}
+
+h1.retro-title {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+  text-shadow: 0 0 5px rgb(0, 221, 255), 0 0 10px rgb(0, 255, 30);
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 red, -2px 0 blue; }
+  25% { text-shadow: -2px 0 red, 2px 0 blue; }
+  50% { text-shadow: 2px 2px red, -2px -2px blue; }
+  75% { text-shadow: -2px 2px red, 2px -2px blue; }
+  100% { text-shadow: 2px 0 red, -2px 0 blue; }
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #00fff7;
+}
+
+.service-card {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  outline: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover,
+.service-card:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgb(0, 225, 255);
+}
+
+.glow-border {
+  padding: 1rem;
+  border-radius: 15px;
+  border: 2px solid rgb(0, 255, 247);
+  box-shadow: 0 0 10px rgb(0, 229, 255), 0 0 20px rgba(0, 251, 29, 0.4);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.glow-border img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card-body h5,
+.card-body p,
+.card-body .price {
+  color: #fff;
+}
+
+.card-body h5 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  font-size: 1rem;
+  flex-grow: 1;
+}
+
+.price {
+  font-weight: bold;
+  color: #00ffcc;
+  margin-top: 1rem;
+}
+
+button#toggleBtn {
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: 2px solid rgb(0, 255, 255);
+  color: rgb(0, 255, 255);
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 5%;
+}
+
+button#toggleBtn:hover {
+  background-color: rgb(29, 255, 255);
+  color: #000;
+}
+
+@media (max-width: 576px) {
+  .card-body h5 {
+    font-size: 1.1rem;
   }
 
-  h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    animation: fadeInDown 1s ease;
+  .card-body p {
+    font-size: 0.95rem;
   }
 
-  p.intro {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: fadeInUp 1.2s ease;
+  .price {
+    font-size: 1rem;
   }
-
-  .card.service-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .card.service-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 8, 255, 0.6);
-  }
-
-  .card img {
-    height: 200px;
-    object-fit: cover;
-  }
-
-  .popup {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ffffff;
-    color: #000;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 136, 255, 0.5);
-    z-index: 10;
-    width: 100%;
-    max-width: 280px;
-    display: none;
-    animation: fadeIn 0.5s ease;
-  }
-
-  .popup small {
-    font-style: italic;
-    font-size: 0.8rem;
-  }
-
-  #toggleBtn {
-    background: linear-gradient(30deg, #00c2cc, #00ff0d);
-    border: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 15px rgb(0, 136, 255);
-    transition: transform 0.2s ease;
-  }
-
-  #toggleBtn:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 30px rgba(0, 123, 255, 0.9);
-  }
-
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
+}

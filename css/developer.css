@@ -1,64 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+/* Estilo general */
 body {
-    background: linear-gradient(0deg, #d75252, #fff238);
+    background-color: #000;
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.02) 3px
+    );
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
     min-height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
-    color: #000;
+    padding-bottom: 3rem;
 }
 
-header h1 {
+/* Encabezado principal con glitch */
+.glitch {
     font-size: 3rem;
-    font-weight: bold;
-    background: linear-gradient(to right, #000000, #fa0303);
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: fadeInDown 1s ease-in-out;
+    font-weight: 900;
+    position: relative;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: glitch-skew 1s infinite alternate;
+    background: black;
+    padding: 10px 20px;
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
 }
 
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.glitch::before {
+    color: #00fff9;
+    transform: translate(2px, -2px);
+    animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    color: #ff00d9;
+    transform: translate(-2px, 2px);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-skew {
+    0% { transform: skew(0deg); }
+    50% { transform: skew(1deg, 1deg); }
+    100% { transform: skew(0deg); }
+}
+
+@keyframes glitch-anim {
+    0% { clip-path: inset(0 0 90% 0); }
+    20% { clip-path: inset(10% 0 80% 0); }
+    40% { clip-path: inset(20% 0 60% 0); }
+    60% { clip-path: inset(30% 0 30% 0); }
+    80% { clip-path: inset(40% 0 20% 0); }
+    100% { clip-path: inset(50% 0 10% 0); }
+}
+
+@keyframes glitch-anim-2 {
+    0% { clip-path: inset(80% 0 0 0); }
+    20% { clip-path: inset(60% 0 20% 0); }
+    40% { clip-path: inset(40% 0 40% 0); }
+    60% { clip-path: inset(20% 0 60% 0); }
+    80% { clip-path: inset(10% 0 80% 0); }
+    100% { clip-path: inset(0 0 100% 0); }
+}
+
+/* Subtítulos */
+h2 {
+    color: #f2ff00;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* Texto introductorio */
 .lead {
     font-size: 1.2rem;
     animation: fadeInUp 1s ease-in-out;
+    text-align: center;
+    color: #00fff9;
 }
 
-h2 {
-    color: #5c0000;
-    font-weight: bold;
-}
-
+/* Badges */
 .badge {
     font-size: 1rem;
     padding: 0.6rem 1rem;
     border-radius: 30px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Tarjetas de proyectos */
 .project-card {
     width: 300px;
     margin: 1rem;
-    background: white;
+    background: #111;
+    border: 2px solid #ff00d9;
     border-radius: 15px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px rgba(255, 0, 255, 0.3);
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
     transform: scale(1.05);
+    box-shadow: 0px 12px 24px rgba(0, 255, 255, 0.3);
 }
 
 .project-img {
     width: 100%;
     height: 180px;
     object-fit: cover;
+    border-bottom: 2px solid #ff00d9;
 }
 
 .project-body {
     padding: 1rem;
+    color: #fff;
 }
 
 .project-body h5 {
     font-weight: bold;
+    color: #00fff9;
 }
 
+/* Botón GitHub */
 .github-btn {
     margin-top: 10px;
     display: inline-block;
@@ -69,6 +147,7 @@ h2 {
     font-size: 1.2rem;
     text-align: center;
     transition: 0.3s ease;
+    border: 2px solid #ff00d9;
 }
 
 .github-btn:hover {
@@ -76,24 +155,12 @@ h2 {
     color: #000;
 }
 
-@keyframes fadeInDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
+/* Animaciones suaves de entrada */
 @keyframes fadeInUp {
     from {
         transform: translateY(20px);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
