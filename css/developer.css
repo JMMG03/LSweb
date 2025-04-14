@@ -13,6 +13,7 @@ body {
     font-family: 'Orbitron', sans-serif;
     min-height: 100vh;
     padding-bottom: 3rem;
+    margin: 5%;
 }
 
 /* Encabezado principal con glitch */
@@ -166,3 +167,18 @@ h2 {
         opacity: 1;
     }
 }
+
+/* Responsive para móviles */
+@media (max-width: 576px) {
+    .project-card {
+      max-width: 100%;
+    }
+  
+    h1.retro-title {
+      font-size: 2.2rem;
+    }
+  
+    .intro {
+      font-size: 1rem;
+    }
+  }
