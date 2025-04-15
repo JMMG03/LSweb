@@ -20,7 +20,7 @@ body {
 
 /* Encabezado principal con glitch */
 .glitch {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 5vw, 3rem);
     font-weight: 900;
     position: relative;
     letter-spacing: 2px;
