@@ -1,48 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio - Home</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <div class="glitch-container">
-      <div class="glitch-line"></div>
-      <div class="glitch-line"></div>
-      <div class="glitch-line"></div>
-      <div class="glitch-line"></div>
-      <div class="glitch-line"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+  <div class="glitch-container">
+    <div class="glitch-line"></div>
+    <div class="glitch-line"></div>
+    <div class="glitch-line"></div>
+    <div class="glitch-line"></div>
+    <div class="glitch-line"></div>
   </div>
-  
-    <header class="py-5 text-center">
-      <div class="container">
-        <h1 class="mb-3">Soy Mario</h1>
-        <p id="profesion" class="mb-4 fs-4">🤔 ¿Qué quieres ver hoy? 🤔</p>
 
-        <!-- Botón central con menú radial -->
-        <div
-          class="d-flex justify-content-center position-relative"
-          style="height: 200px"
-        >
-          <button id="mainBtn" class="btn btn-dark align-self-center">
-            🫵​
-          </button>
+  <main>
+  <header class="py-5 text-center">
+    <div class="container">
+      <h1 class="mb-3">Soy Mario</h1>
+      <p id="profesion" class="mb-4 fs-4">🤔 ¿Qué quieres ver hoy? 🤔</p>
 
-          <!-- Menú radial (aparece al mantener pulsado) -->
-          <div id="radialMenu" class="radial-menu">
-            <div id="option1" class="option developer-option" data-target="./html/developer.html">Desarrollador</div>
-            <div id="option2" class="option massage-option" data-target="./html/quiromasaje.html">Quiromasajista</div>
-          </div>
+      <!-- Botón central con menú radial -->
+      <div class="d-flex justify-content-center position-relative" style="height: 200px">
+        <button id="mainBtn" class="btn btn-dark align-self-center">
+          🫵​
+        </button>
+
+        <!-- Menú radial (aparece al mantener pulsado) -->
+        <div id="radialMenu" class="radial-menu">
+          <div id="option1" class="option developer-option" data-target="./html/developer.html">Desarrollador</div>
+          <div id="option2" class="option massage-option" data-target="./html/quiromasaje.html">Quiromasajista</div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+</main>
+  <footer class="footer mt-auto py-3 text-center">
+    <div class="container">
+      <h2 class="mb-3">Sígueme</h2>
+      <div class="social-icons">
+        <a href="https://github.com/JMMG03" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/jose-mario" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/_j_mario" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js"></script>
+
+</body>
+
 </html>
