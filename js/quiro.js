@@ -7,13 +7,25 @@ const extraCards = [
     title: "Pies y Reflexología",
     img: "https://via.placeholder.com/400x200?text=Reflexología",
     desc: "Masaje en pies para activar órganos y mejorar circulación.",
+    price: "20€"
+  },
+  {
+    title: "Masaje Deportivo",
+    img: "https://via.placeholder.com/400x200?text=Piedras+Calientes",
+    desc: "Puede ser relajante u orientado a potenciar el rendimiento deportivo.",
     price: "30€"
   },
   {
-    title: "Masaje con Piedras Calientes",
+    title: "Drenaje Linfático",
     img: "https://via.placeholder.com/400x200?text=Piedras+Calientes",
-    desc: "Relajación profunda con piedras volcánicas.",
-    price: "45€"
+    desc: "Estimular el sistema linfático para optimizar el flujo de la linfa, encargada de transportar nutrientes y eliminar desechos.",
+    price: "25€"
+  },
+  {
+    title: "Otras terapias",
+    img: "https://via.placeholder.com/400x200?text=Piedras+Calientes",
+    desc: "- Electroterapia<br>- Cupping<br> # Consultar.",
+    price: "?€"
   }
 ];
 
