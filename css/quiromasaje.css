@@ -132,6 +132,8 @@ button#toggleBtn:hover {
   }
 
   .retro-img {
+    margin-left: auto;
+    margin-right: auto;
     width: 50vh;
     height: 25vh;
   }
