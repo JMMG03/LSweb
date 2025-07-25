@@ -13,7 +13,7 @@ const extraCards = [
     title: "Masaje Deportivo",
     img: "https://via.placeholder.com/400x200?text=Piedras+Calientes",
     desc: "Puede ser relajante u orientado a potenciar el rendimiento deportivo.",
-    price: "30€"
+    price: "20€ / media hora"
   },
   {
     title: "Drenaje Linfático",
