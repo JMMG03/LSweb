@@ -41,11 +41,6 @@ h1.retro-title {
   flex-direction: column;
 }
 
-.service-card:hover,
-.service-card:focus {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgb(253, 211, 1);
-}
 
 .glow-border {
   padding: 1rem;
