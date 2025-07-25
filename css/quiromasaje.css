@@ -101,7 +101,7 @@ button#toggleBtn {
   margin-bottom: 5%;
 }
 
-p {
+.descript {
   padding-top: 5%;
 }
 
@@ -123,7 +123,7 @@ button#toggleBtn:hover {
     font-size: 1rem;
   }
 
-  p{
+  .descript{
     padding-top: 5%;
   }
 
