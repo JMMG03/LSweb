@@ -123,6 +123,10 @@ button#toggleBtn:hover {
     font-size: 1rem;
   }
 
+  p{
+    padding-top: 5%;
+  }
+
   /* Oculta los controles del carrusel en móvil */
 .carousel-control-prev,
 .carousel-control-next {
