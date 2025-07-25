@@ -123,4 +123,28 @@ button#toggleBtn:hover {
     font-size: 1rem;
   }
 
+  /* Oculta los controles del carrusel en móvil */
+.carousel-control-prev,
+.carousel-control-next {
+  display: none;
+}
+
+/* A partir de 768px (pantalla de tablet o PC), se muestran */
+@media (min-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    filter: invert(1) drop-shadow(0 0 4px #00ffff);
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
 }
