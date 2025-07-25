@@ -126,14 +126,14 @@ button#toggleBtn:hover {
   /* Oculta los controles del carrusel en móvil */
 .carousel-control-prev,
 .carousel-control-next {
-  display: none;
+  display: none !important;
 }
 
 /* A partir de 768px (pantalla de tablet o PC), se muestran */
 @media (min-width: 768px) {
   .carousel-control-prev,
   .carousel-control-next {
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     width: 5%;
