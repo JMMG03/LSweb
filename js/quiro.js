@@ -37,7 +37,6 @@ toggleBtn.addEventListener("click", () => {
       col.innerHTML = `
         <div class="card service-card">
           <div class="glow-border">
-            <img src="${card.img}" class="card-img-top" alt="${card.title}">
             <div class="card-body">
               <h5>${card.title}</h5>
               <p>${card.desc}</p>

@@ -1,6 +1,6 @@
 body {
   background-color: #0e0e0e;
-  color: #00ffff;
+  color: #fff700;
   font-family: 'Courier New', monospace;
   margin: 5%;
 }
@@ -9,23 +9,23 @@ h1.retro-title {
   text-align: center;
   margin-top: 1rem;
   font-size: 3rem;
-  text-shadow: 0 0 5px rgb(0, 221, 255), 0 0 10px rgb(0, 255, 30);
+  text-shadow: 0 0 5px rgb(255, 204, 0), 0 0 10px rgb(0, 255, 30);
   animation: glitch 1s infinite;
 }
 
 @keyframes glitch {
-  0% { text-shadow: 2px 0 red, -2px 0 blue; }
-  25% { text-shadow: -2px 0 red, 2px 0 blue; }
-  50% { text-shadow: 2px 2px red, -2px -2px blue; }
-  75% { text-shadow: -2px 2px red, 2px -2px blue; }
-  100% { text-shadow: 2px 0 red, -2px 0 blue; }
+  0% { text-shadow: 2px 0 rgb(255, 132, 0), -2px 0 rgb(77, 255, 0); }
+  25% { text-shadow: -2px 0 rgb(255, 132, 0), 2px 0 rgb(77, 255, 0); }
+  50% { text-shadow: 2px 2px rgb(255, 132, 0), -2px -2px rgb(77, 255, 0); }
+  75% { text-shadow: -2px 2px rgb(255, 132, 0), 2px -2px rgb(77, 255, 0); }
+  100% { text-shadow: 2px 0 rgb(255, 132, 0), -2px 0 rgb(77, 255, 0); }
 }
 
 .intro {
   text-align: center;
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #00fff7;
+  color: #ffc800;
 }
 
 .service-card {
@@ -44,14 +44,14 @@ h1.retro-title {
 .service-card:hover,
 .service-card:focus {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgb(0, 225, 255);
+  box-shadow: 0 10px 25px rgb(253, 211, 1);
 }
 
 .glow-border {
   padding: 1rem;
   border-radius: 15px;
-  border: 2px solid rgb(0, 255, 247);
-  box-shadow: 0 0 10px rgb(0, 229, 255), 0 0 20px rgba(0, 251, 29, 0.4);
+  border: 2px solid rgb(255, 208, 0);
+  box-shadow: 0 0 10px rgb(157, 255, 0), 0 0 20px rgba(0, 251, 29, 0.4);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -90,15 +90,15 @@ h1.retro-title {
 
 .price {
   font-weight: bold;
-  color: #00ffcc;
+  color: #ffe600;
   margin-top: 1rem;
 }
 
 button#toggleBtn {
   font-family: inherit;
   font-size: 1.2rem;
-  border: 2px solid rgb(0, 255, 255);
-  color: rgb(0, 255, 255);
+  border: 2px solid rgb(255, 208, 0);
+  color: rgb(255, 217, 0);
   background-color: transparent;
   padding: 0.5rem 1.5rem;
   border-radius: 10px;
@@ -107,7 +107,7 @@ button#toggleBtn {
 }
 
 button#toggleBtn:hover {
-  background-color: rgb(29, 255, 255);
+  background-color: rgb(255, 207, 14);
   color: #000;
 }
 
