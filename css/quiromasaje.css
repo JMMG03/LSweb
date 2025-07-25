@@ -5,20 +5,94 @@ body {
   margin: 5%;
 }
 
-h1.retro-title {
+.neon-title {
+  font-size: 3.2rem;
+  color: #ffd700;
   text-align: center;
-  margin-top: 1rem;
-  font-size: 3rem;
-  text-shadow: 0 0 5px rgb(255, 204, 0), 0 0 10px rgb(0, 255, 30);
-  animation: glitch 1s infinite;
+  text-shadow:
+    0 0 3px #ffd700,
+    0 0 6px #ffc400,
+    0 0 10px #ffaa00;
+  animation: flickerGlow 3s infinite;
+  font-weight: bold;
 }
 
+
+
+@keyframes flickerGlow {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  48% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  52% {
+    opacity: 0.95;
+  }
+}
+
+
+.retro-quote {
+  font-size: 2rem;
+  color: #ffcc00;
+  text-shadow:
+    0 0 2px #ffcc00,
+    0 0 4px #ffaa00,
+    0 0 6px #ffcc33;
+  animation: flicker 2s infinite;
+  font-weight: bold;
+}
+
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  55% {
+    opacity: 0.9;
+  }
+}
+
+
 @keyframes glitch {
-  0% { text-shadow: 2px 0 rgb(255, 132, 0), -2px 0 rgb(77, 255, 0); }
-  25% { text-shadow: -2px 0 rgb(255, 132, 0), 2px 0 rgb(77, 255, 0); }
-  50% { text-shadow: 2px 2px rgb(255, 132, 0), -2px -2px rgb(77, 255, 0); }
-  75% { text-shadow: -2px 2px rgb(255, 132, 0), 2px -2px rgb(77, 255, 0); }
-  100% { text-shadow: 2px 0 rgb(255, 132, 0), -2px 0 rgb(77, 255, 0); }
+  0% {
+    text-shadow: 2px 0 rgb(255, 132, 0), -2px 0 rgb(77, 255, 0);
+  }
+
+  25% {
+    text-shadow: -2px 0 rgb(255, 132, 0), 2px 0 rgb(77, 255, 0);
+  }
+
+  50% {
+    text-shadow: 2px 2px rgb(255, 132, 0), -2px -2px rgb(77, 255, 0);
+  }
+
+  75% {
+    text-shadow: -2px 2px rgb(255, 132, 0), 2px -2px rgb(77, 255, 0);
+  }
+
+  100% {
+    text-shadow: 2px 0 rgb(255, 132, 0), -2px 0 rgb(77, 255, 0);
+  }
 }
 
 .intro {
@@ -27,6 +101,28 @@ h1.retro-title {
   margin-bottom: 2rem;
   color: #ffc800;
 }
+
+.promo-card {
+  animation: pulseGlow 2s infinite;
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 12px rgba(255, 230, 0, 0.6);
+  border-radius: 12px;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 12px rgba(255, 230, 0, 0.6);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 230, 0, 1);
+  }
+
+  100% {
+    box-shadow: 0 0 12px rgba(255, 230, 0, 0.6);
+  }
+}
+
 
 .service-card {
   background-color: #1a1a1a;
@@ -83,6 +179,17 @@ h1.retro-title {
   flex-grow: 1;
 }
 
+.card.bg-secondary {
+  background-color: #1f1f1f !important;
+  border: 1px solid #333;
+  box-shadow: none;
+}
+
+.card.bg-secondary li {
+  color: #ccc;
+  line-height: 1.6;
+}
+
 .price {
   font-weight: bold;
   color: #ffe600;
@@ -123,32 +230,53 @@ button#toggleBtn:hover {
     font-size: 1rem;
   }
 
-  .descript{
+  .descript {
     padding-top: 5%;
   }
 
   /* Oculta los controles del carrusel en móvil */
-.carousel-control-prev,
-.carousel-control-next {
-  display: none !important;
-}
-
-/* A partir de 768px (pantalla de tablet o PC), se muestran */
-@media (min-width: 768px) {
   .carousel-control-prev,
   .carousel-control-next {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 5%;
+    display: none !important;
   }
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: invert(1) drop-shadow(0 0 4px #00ffff);
-    width: 2rem;
-    height: 2rem;
+  /* A partir de 768px (pantalla de tablet o PC), se muestran */
+  @media (min-width: 768px) {
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 5%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: invert(1) drop-shadow(0 0 4px #00ffff);
+      width: 2rem;
+      height: 2rem;
+    }
   }
+
 }
 
+.btn-consulta {
+  background-color: transparent;
+  color: #ffc400;
+  border: 2px solid #ffc400;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-family: 'Courier New', monospace;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px #ffd700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-consulta:hover {
+  background-color: #ffd700;
+  color: #000;
+  box-shadow: 0 0 10px #ffea00;
 }
