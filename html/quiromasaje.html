@@ -299,6 +299,16 @@
 
 
   <p class="descript">* Recuerda que todos estos precios pueden variar según disponibilidad, consultar diferentes precios y packs. *</p>
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 600); // coincide con el tiempo del transition
+  });
+</script>
+
 </body>
 
 </html>
