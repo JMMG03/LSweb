@@ -280,6 +280,12 @@ button#toggleBtn:hover {
   color: #000;
   box-shadow: 0 0 10px #ffea00;
 }
+
+.btn-glow {
+  animation: glowPulse 2s infinite;
+  box-shadow: 0 0 10px #ffd700, 0 0 20px #ffc400;
+}
+
 #preloader {
   position: fixed;
   top: 0;
