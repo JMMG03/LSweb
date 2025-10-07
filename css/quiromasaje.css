@@ -355,3 +355,63 @@ button#toggleBtn:hover {
   .wa-rail .wa-card{ min-width: 150px; }
   .wa-rail .wa-label{ font-size: 0.95rem; }
 }
+
+/* ===== Modal tarifas ===== */
+.tmodal{position:fixed;inset:0;display:none;z-index:10000;}
+.tmodal.show{display:block;}
+.tbackdrop{position:absolute;inset:0;background:rgba(0,0,0,.8);backdrop-filter:saturate(120%) blur(2px);}
+.tpanel{
+  position:relative;margin:4vh auto 0;max-width:980px;width:92%;
+  background:#111;border:2px solid #ffc400;border-radius:16px;
+  box-shadow:0 0 18px rgba(255,230,0,.35), 0 0 32px rgba(0,251,29,.18);
+  padding:1rem 1rem 1.25rem;max-height:88vh;display:flex;flex-direction:column;
+  animation: tpop .18s ease-out;
+}
+@keyframes tpop{from{transform:scale(.98);opacity:0}to{transform:scale(1);opacity:1}}
+.tclose{
+  position:absolute;right:.75rem;top:.6rem;background:transparent;border:2px solid #ffc400;
+  color:#ffc400;border-radius:8px;padding:.15rem .45rem;cursor:pointer
+}
+.tcontrols{display:flex;gap:.6rem;align-items:center;justify-content:space-between;margin:.5rem 0 .75rem}
+#tSearch{
+  background:#0f0f0f;border:2px solid #333;color:#ffd700;border-radius:10px;
+  padding:.5rem .75rem;min-width:210px;box-shadow:0 0 6px rgba(255,230,0,.15) inset
+}
+.ttabs{display:flex;flex-wrap:wrap;gap:.4rem}
+.ttab{
+  background:#151515;border:2px solid #ffc400;color:#ffc400;border-radius:10px;
+  padding:.35rem .7rem;cursor:pointer;transition:transform .15s ease, box-shadow .15s ease;
+}
+.ttab.active, .ttab:hover{transform:translateY(-1px);box-shadow:0 0 8px rgba(255,230,0,.5)}
+.tgrid{
+  overflow:auto;flex:1;border:1px solid #333;border-radius:12px;padding:.6rem;
+  background:linear-gradient(180deg,#0c0c0c, #111 40%, #0c0c0c);
+}
+.tcard{
+  display:grid;grid-template-columns:1fr auto;gap:.35rem;align-items:center;
+  background:#161616;border:2px solid #444;border-radius:12px;padding:.7rem .75rem;margin-bottom:.6rem
+}
+.tname{font-weight:800;color:#fff}
+.tmeta{font-size:.95rem;color:#ddd}
+.tbadge{
+  justify-self:start;font-weight:800;border:2px solid #ffd700;color:#0a0a0a;background:#ffd700;
+  padding:.15rem .45rem;border-radius:999px;text-shadow:none;box-shadow:0 0 10px rgba(255,230,0,.45)
+}
+.tprice{font-weight:900;color:#ffe600}
+.tcta{
+  justify-self:end;white-space:nowrap
+}
+.tcta .btn-consulta{padding:.45rem .8rem;font-size:.95rem}
+
+/* Paginación */
+.tpager{display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.6rem}
+
+/* Responsive */
+@media (min-width:768px){
+  .tgrid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;padding:.8rem}
+  .tcard{margin-bottom:0}
+}
+@media (max-width:575px){
+  .tpanel{width:96%;margin-top:2.5vh}
+  .tcta .btn-consulta{font-size:.9rem}
+}
