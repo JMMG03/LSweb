@@ -225,7 +225,7 @@ button#toggleBtn:hover {
   text-decoration: none;
   background: #151515;
   border: 2px solid #ffc400;
-  box-shadow: 0 0 10px rgba(255,230,0,0.35);
+  box-shadow: 0 0 10px rgba(255, 166, 0, 0.35);
   transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
 
@@ -243,7 +243,7 @@ button#toggleBtn:hover {
 .wa-card:focus-visible {
   transform: translateY(-2px) scale(1.02);
   background: #1a1a1a;
-  box-shadow: 0 0 14px rgba(255,230,0,0.6), 0 0 28px rgba(0,251,29,0.25);
+  box-shadow: 0 0 10px rgb(255, 183, 0), 0 0 10px rgba(251, 163, 0, 0.242);
   outline: none;
 }
 
@@ -262,11 +262,6 @@ button#toggleBtn:hover {
 
 .wa-rail::-webkit-scrollbar { display: none; }
 
-.wa-rail .wa-card {
-  flex: 0 0 auto;
-  min-width: 150px;
-  scroll-snap-align: start;
-}
 
 /* ≥768px: grid y sin fade */
 @media (min-width: 768px) {
@@ -304,6 +299,13 @@ button#toggleBtn:hover {
   .carousel-control-next { display: none !important; }
   .logo-loader { width: 120px; }
 }
+@media (max-width: 400px){
+  .wa-rail .wa-card{ min-width: 135px; }
+}
+@media (max-width: 768px){
+  .wa-rail .wa-card{ padding: 1rem .7rem; }
+  .wa-rail .wa-label{ font-size: 0.95rem; }
+}
 
 @media (min-width: 768px) {
   .carousel-control-prev,
@@ -319,4 +321,37 @@ button#toggleBtn:hover {
     width: 2rem;
     height: 2rem;
   }
+}
+
+.wa-rail .wa-card{
+  width: auto;
+  min-width: 170px;  
+  max-width: 240px;   
+  padding: 1rem .9rem;
+  overflow: hidden;   
+}
+
+.wa-rail .wa-label{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.wa-rail{
+  padding: .5rem .6rem; 
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+@media (min-width: 768px){
+  .wa-rail .wa-label{
+    white-space: normal;   
+    text-overflow: clip;
+  }
+}
+
+@media (max-width: 400px){
+  .wa-rail .wa-card{ min-width: 150px; }
+  .wa-rail .wa-label{ font-size: 0.95rem; }
 }
