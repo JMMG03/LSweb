@@ -327,6 +327,7 @@
             <button class="ttab active" data-cat="individuales">Individuales</button>
             <button class="ttab" data-cat="cupping">Cupping</button>
             <button class="ttab" data-cat="electro">Electroterapia</button>
+            <button class="ttab" data-cat="extras"> Extras</button>
             <button class="ttab" data-cat="packs">Packs & Bonos</button>
           </div>
           <input id="tSearch" type="search" placeholder="Buscar servicio">
@@ -376,42 +377,6 @@
       precios y packs. *</p>
 
     <script src="../js/quiro.js"></script>
-
-
-    <!-- MODAL TARIFAS -->
-    <div id="tarifasModal" class="tmodal" aria-hidden="true" data-wa-number="34690904462">
-      <div class="tbackdrop" data-close="1"></div>
-      <div class="tpanel" role="dialog" aria-modal="true" aria-labelledby="tTitle">
-        <button class="tclose" aria-label="Cerrar" data-close="1">✖</button>
-        <h3 id="tTitle" class="neon-title" style="font-size:2rem;margin-bottom:.5rem;">Tarifas & Reservas</h3>
-        <p class="intro" style="margin-top:0.25rem;">Para bloquear tu hora es imprescindible abonar la
-          <strong>reserva</strong> (se descuenta del total).
-        </p>
-
-        <!-- Controles -->
-        <div class="tcontrols">
-          <div class="ttabs" role="tablist" aria-label="Categorías">
-            <button class="ttab active" data-cat="individuales" role="tab" aria-selected="true">Individuales</button>
-            <button class="ttab" data-cat="cupping" role="tab" aria-selected="false">Cupping</button>
-            <button class="ttab" data-cat="electro" role="tab" aria-selected="false">Electroterapia</button>
-            <button class="ttab" data-cat="extras" role="tab" aria-selected="false">* Extras *</button>
-            <button class="ttab" data-cat="packs" role="tab" aria-selected="false">Packs & Bonos</button>
-          </div>
-          <input id="tSearch" type="search" placeholder="Buscar (ej. 1 h, relajante, zona…)"
-            aria-label="Buscar servicio">
-        </div>
-
-        <!-- Grid -->
-        <div id="tGrid" class="tgrid" aria-live="polite"></div>
-
-        <!-- Paginación -->
-        <div class="tpager">
-          <button id="tPrev" class="btn-consulta" disabled>◀ Anterior</button>
-          <span id="tPageInfo" class="intro" style="margin:0 .5rem;">1 / 1</span>
-          <button id="tNext" class="btn-consulta" disabled>Siguiente ▶</button>
-        </div>
-      </div>
-    </div>
 
 </body>
 
