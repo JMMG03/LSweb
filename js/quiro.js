@@ -179,14 +179,23 @@ document.getElementById('openTarifas').addEventListener('click', (e) => {
     document.body.style.overflow = 'hidden';
 });
 
+function closeTarifas(){
+  elModal.classList.remove('show');
+  document.body.style.overflow = '';
+}
+
 elModal.addEventListener('click', (e) => {
-    if (e.target.dataset.close) { elModal.classList.remove('show'); document.body.style.overflow = ''; }
+  const closer = e.target.closest('[data-close]');
+  if (closer) {
+    e.preventDefault();
+    closeTarifas();
+  }
 });
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && elModal.classList.contains('show')) {
-        elModal.classList.remove('show'); document.body.style.overflow = '';
-    }
+
+document.addEventListener('keydown', (e)=>{
+  if (e.key === 'Escape' && elModal.classList.contains('show')) closeTarifas();
 });
+
 
 tTabs.forEach(btn => {
     btn.addEventListener('click', () => {

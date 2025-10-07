@@ -512,3 +512,40 @@ button#toggleBtn:hover {
   .tbadge{ font-size:.85rem; }
   .tcta .btn-consulta{ font-size:.9rem; padding:.4rem .65rem; }
 }
+
+
+/* FIX: botón de cierre perfectamente alineado y clicable */
+.tpanel{ position: relative; z-index: 2; }
+
+.tclose{
+  position: absolute;
+  top: 8px;              
+  right: 8px;
+  width: 40px;          
+  height: 40px;
+  padding: 0;           
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;        
+  font-size: 18px;
+  border: 2px solid #ffc400;
+  border-radius: 10px;
+  background: rgba(0,0,0,.4);
+  color: #ffc400;
+  z-index: 10001;        
+  pointer-events: auto;  
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Más compacto en pantallas pequeñas */
+@media (max-width: 480px){
+  .tclose{
+    top: 6px;
+    right: 6px;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 9px;
+  }
+}
